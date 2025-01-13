@@ -13,15 +13,15 @@ from dateutil import parser
 
 import ECOSTRESS
 import colored_logging as cl
-from ECOSTRESS.L1_RAD import L1CGRAD, L1BRAD
-from ECOSTRESS.L2G_CLOUD import L2GCLOUD
-from ECOSTRESS.L2_CLOUD import L2CLOUD
-from ECOSTRESS.L2_LSTE import L2LSTE, L2GLSTE
-from ECOSTRESS.exit_codes import SUCCESS_EXIT_CODE, ECOSTRESSExitCodeException, RUNCONFIG_FILENAME_NOT_SUPPLIED, \
+from L1_L2_RAD_LSTE.L1_RAD import L1CGRAD, L1BRAD
+from L1_L2_RAD_LSTE.L2G_CLOUD import L2GCLOUD
+from L1_L2_RAD_LSTE.L2_CLOUD import L2CLOUD
+from L1_L2_RAD_LSTE.L2_LSTE import L2LSTE, L2GLSTE
+from L1_L2_RAD_LSTE.exit_codes import SUCCESS_EXIT_CODE, ECOSTRESSExitCodeException, RUNCONFIG_FILENAME_NOT_SUPPLIED, \
     MissingRunConfigValue, UnableToParseRunConfig, LandFilter
-from ECOSTRESS.find_ECOSTRESS_C1_scene import find_ECOSTRESS_C1_scene
-from ECOSTRESS.runconfig import ECOSTRESSRunConfig
-from ECOSTRESS.scan_resampling import generate_scan_kd_trees, clip_tails
+from L1_L2_RAD_LSTE.find_ECOSTRESS_C1_scene import find_ECOSTRESS_C1_scene
+from L1_L2_RAD_LSTE.runconfig import ECOSTRESSRunConfig
+from L1_L2_RAD_LSTE.scan_resampling import generate_scan_kd_trees, clip_tails
 from rasters import KDTree, RasterGrid
 from timer import Timer
 

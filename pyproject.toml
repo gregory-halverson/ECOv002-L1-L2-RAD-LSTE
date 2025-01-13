@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=60", "setuptools-scm>=8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "L1_L2_RAD_LSTE"
+version = "1.0.0"
+description = "ECOSTRESS Collection 2 L1CG/L1CT Radiance and L2G/L2T Surface Temperature Product Generating Executable (PGE)"
+readme = "README.md"
+authors = [
+    { name = "Gregory H. Halverson", email = "gregory.h.halverson@jpl.nasa.gov" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "colored-logging",
+    "ECOv002-granules",
+    "ECOv002-CMR",
+    "he5py",
+    "python-dateutil",
+    "rasters"
+]
+
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+]
+
+[tool.setuptools.package-data]
+L1_L2_RAD_LSTE = ["*.txt"]
+
+[project.urls]
+"Homepage" = "https://github.com/ECOSTRESS-Collection-2/ECOv002-L1-L2-RAD-LSTE"
+
+[tool.setuptools.packages.find]
+include = ["L1_L2_RAD_LSTE"]
+exclude = ["data", "build", "tests"]
